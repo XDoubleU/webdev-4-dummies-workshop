@@ -1,0 +1,38 @@
+{% extends "_base.html" %}
+
+{% block title %}Albums{% endblock title %}
+
+{% block content %}
+    <form action="{% url 'album_list' %}" method="get">
+        <input type="search" name="q" placeholder="Search">
+        <button type="submit">Search</button>
+    </form>
+
+    {% for album in album_list %}
+        <div>
+            <h2><a href="{{ album.get_absolute_url }}">
+                {{ album.title }} - {{ album.artist.name }}
+            </a></h2>
+        </div>
+    {% endfor %}
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+    
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </span>
+    
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+{% endblock content %}
+
+

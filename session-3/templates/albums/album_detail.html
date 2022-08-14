@@ -1,0 +1,26 @@
+{% extends "_base.html" %}
+
+{% block title %}{{ album.title }}{% endblock title %}
+
+{% block content %}
+    <div>
+        {% if album.cover %}
+            <img src="{{ album.cover.url }}" alt="{{ album.title }}">
+        {% endif %}
+        <h2>{{ album.title }}</h2>
+        <p>Artist(s):</p>
+        <ul>
+            {% for artist in album.artists %}
+                <li>{{ artist.name }}</li>
+            {% endfor %}
+        </ul>
+        <p>Record label: {{ album.record_label }}</p>
+        <p>Price: €{{ album.price }}</p>
+
+        {% if user.is_authenticated and not album in user.albums %}
+            <button onclick="location.href='{{ payment_url }}'">Buy now</button>
+        {% endif %}
+    </div>
+{% endblock content %}
+
+
