@@ -23,8 +23,8 @@ class MolliePaymentView(APIView):
         
         payment = mollie_client.payments.get(id)
         if payment.is_paid():
-            user = CustomUser.objects.get(id=payment.metadata['userid'])
-            album = Album.objects.get(id=payment.metadata['albumid'])
+            user = CustomUser.objects.get(id=payment.metadata['user_id'])
+            album = Album.objects.get(id=payment.metadata['album_id'])
             user.albums.add(album)
         
         return HttpResponse(status=status.HTTP_200_OK)
