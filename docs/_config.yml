@@ -1,7 +1,7 @@
-markdown: kramdown
+title: Webdevelopment for dummies workshop
+description: Here you can easily download slides and navigate to the source code for these workshops.
+show-downloads: false
+theme: jekyll-theme-minimal
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
-- jekyll-remote-theme
-
-title: Webdevelopment 4 dummies workshop
-description: No description
+  - jekyll-remote-theme
