@@ -32,6 +32,9 @@ class Album(TimeStampedModel):
         return reverse("album_detail", args=[str(self.id)])
     
     def get_payment_url(self, request):
+        if len(settings.MOLLIE_API_KEY) < 0:
+            return ""
+            
         client = Client()
         client.set_api_key(settings.MOLLIE_API_KEY)
 
@@ -46,7 +49,7 @@ class Album(TimeStampedModel):
             },
             'description': f"Payment of {self.title}",
             'redirectUrl': request.build_absolute_uri(reverse("user_album_list")),
-            'webhookUrl': request.build_absolute_uri(reverse("mollie_payment_webhook"))
+            'webhookUrl': request.build_absolute_uri(reverse("mollie_payment"))
         })
 
         return payment.checkout_url
