@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - "DJANGO_SECRET_KEY=django-insecure-%b!%%v)x^_j&hf+5e!=po8*0ifxogymuk&5wl_70&zurlbw$$30"
+      - "DJANGO_DEBUG=True"
+      - "DJANGO_SECURE_SSL_REDIRECT=False"
+      - "DJANGO_SECURE_HSTS_SECONDS=0"
+      - "DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS=False"
+      - "DJANGO_SECURE_HSTS_PRELOAD=False"
+      - "DJANGO_SESSION_COOKIE_SECURE=False"
+      - "DJANGO_CSRF_COOKIE_SECURE=False"
+
+  
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+
+volumes: #level of services
+  postgres_data:
+
