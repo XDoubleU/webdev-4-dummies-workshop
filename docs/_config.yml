@@ -2,6 +2,6 @@ title: Webdevelopment for dummies workshop
 description: Here you can easily download slides and navigate to the source code for these workshops.
 show-downloads: false
 theme: jekyll-theme-minimal
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: "dracula/gh-pages"
 plugins:
   - jekyll-remote-theme
