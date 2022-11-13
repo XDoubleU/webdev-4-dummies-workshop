@@ -1,0 +1,25 @@
+:root{
+    --primary: #fb00ff;
+    --primary-rgb: 251, 0, 255;
+    --primary-darker: #b500b8;
+
+    --bs-primary: var(--primary);
+    --bs-primary-rgb: var(--primary-rgb);
+}
+
+.btn-primary{
+    --bs-btn-bg: var(--primary);
+    --bs-btn-border-color: var(--primary);
+    --bs-btn-color: white;
+    --bs-btn-active-border-color: var(--primary-darker);
+    --bs-btn-hover-bg: var(--primary-darker);
+    --bs-btn-hover-color: white;
+    --bs-btn-active-bg: var(--primary-darker);
+    --bs-btn-active-color: white;
+    --bs-btn-focus-shadow-rgb: var(--primary-rgb);
+    --bs-btn-hover-border-color: var(--primary);
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+  }

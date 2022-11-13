@@ -1,0 +1,50 @@
+{% extends "_base.html" %}
+
+{% block title %}Albums{% endblock title %}
+
+{% block content %}
+    <form class="row g-3" action="{% url 'album_list' %}" method="get">
+        <div class="col-auto">
+            <input class="form-control" type="search" name="q" placeholder="Search">
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+    </form>
+
+    <br>
+    <br>
+
+    {% for album in album_list %}
+        <div class="card" style="width: 18rem;">
+            <img src="{{ album.cover.url }}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ album.title }}</h5>
+            <p class="card-text">{{ album.artist.name }}</p>
+            <a href="{{ album.get_absolute_url }}" class="btn btn-primary">See more</a>
+            </div>
+        </div>
+    {% endfor %}
+
+    <br>
+    <br>
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; first</a> <!-- << -->
+                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a> <!-- >> -->
+            {% endif %}
+        </span> 
+    </div>
+
+{% endblock content %}
