@@ -1,7 +1,8 @@
 <!--
---- Readme.md Snippet without images Start ---
+&lt;--- Readme.md Snippet without images Start ---&gt;
 ## Tech Stack
 XDoubleU/webdev-4-dummies-workshop is built on the following main stack:
+
 - [Python](https://www.python.org) – Languages
 - [Django](https://www.djangoproject.com/) – Frameworks (Full Stack)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
@@ -10,11 +11,13 @@ XDoubleU/webdev-4-dummies-workshop is built on the following main stack:
 - [Docker](https://www.docker.com/) – Virtual Machine Platforms & Containers
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet without images End ---
 
---- Readme.md Snippet with images Start ---
+&lt;--- Readme.md Snippet without images End ---&gt;
+
+&lt;--- Readme.md Snippet with images Start ---&gt;
 ## Tech Stack
 XDoubleU/webdev-4-dummies-workshop is built on the following main stack:
+
 - <img width='25' height='25' src='https://img.stackshare.io/service/993/pUBY5pVj.png' alt='Python'/> [Python](https://www.python.org) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/994/4aGjtNQv.png' alt='Django'/> [Django](https://www.djangoproject.com/) – Frameworks (Full Stack)
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
@@ -23,14 +26,15 @@ XDoubleU/webdev-4-dummies-workshop is built on the following main stack:
 - <img width='25' height='25' src='https://img.stackshare.io/service/586/n4u37v9t_400x400.png' alt='Docker'/> [Docker](https://www.docker.com/) – Virtual Machine Platforms & Containers
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet with images End ---
+
+&lt;--- Readme.md Snippet with images End ---&gt;
 -->
 <div align="center">
 
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [XDoubleU/webdev-4-dummies-workshop](https://github.com/XDoubleU/webdev-4-dummies-workshop)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|12<br/>Tools used|11/09/23 <br/>Report generated|
+|12<br/>Tools used|01/04/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -133,11 +137,11 @@ Full tech stack [here](/techstack.md)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
-|[asgiref](https://pypi.org/asgiref)|v3.5.2|08/13/22|Xander Warszawski |BSD-3-Clause|N/A|
-|[python-dotenv](https://pypi.org/python-dotenv)|v0.21.0|11/13/22|Xander Warszawski |BSD-3-Clause|N/A|
-|[sqlparse](https://pypi.org/sqlparse)|v0.4.3|08/13/22|Xander Warszawski |BSD-3-Clause|[CVE-2023-30608](https://github.com/advisories/GHSA-rrm6-wvj7-cwh2) (Moderate)|
+|[asgiref](https://pypi.org/project/asgiref)|v3.5.2|08/13/22|Xander Warszawski |BSD-3-Clause|N/A|
+|[python-dotenv](https://pypi.org/project/python-dotenv)|v0.21.0|11/13/22|Xander Warszawski |BSD-3-Clause|N/A|
+|[sqlparse](https://pypi.org/project/sqlparse)|v0.4.3|08/13/22|Xander Warszawski |BSD-3-Clause|[CVE-2023-30608](https://github.com/advisories/GHSA-rrm6-wvj7-cwh2) (Moderate)|
 
 <br/>
 <div align='center'>
 
-Generated via [Stack File](https://github.com/apps/stack-file)
+Generated via [Stack File](https://github.com/marketplace/stack-file)
